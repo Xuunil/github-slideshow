@@ -8,6 +8,7 @@
 read -r -p "¿Qué nombre quieres ponerle al script? " nom_Script
 ext=$(echo "$nom_Script" | awk -F"." '{print $2}')
 
+# Comprueba si la extensión es "sh" o no. Si no es "sh" se lo añade.
 if [ "$ext" != "sh" ]; then
 
         nom_Script=$nom_Script.sh
